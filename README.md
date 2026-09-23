@@ -1,31 +1,31 @@
 # UnityCyberBallGame
 
-Juego de acción en Unity. El jugador controla a **Roboto**: anda, salta, puede pasar a un modo bola más rápido y tiene un dash. El nivel tiene enemigos que disparan, puertas, botones y edificios que se pueden romper.
+An action game in Unity. The player controls **Roboto**: it walks, jumps, can switch into a faster ball mode, and has a dash. The level has shooting enemies, doors, buttons, and buildings that can be broken.
 
-El repositorio versiona la carpeta `Assets` (scripts y el contenido que cuelga de ella), no un paquete listo para publicar.
+The repository versions the `Assets` folder (scripts and whatever else hangs off it), not a ready-to-ship package.
 
-## Scripts propios
+## Project scripts
 
 ```
 Assets/Scripts/
 ├── Player/          RobotoController, PlayerInputManager
-├── Hability/        Dash y habilidades
-├── Enemies/         Warrior, disparos y pool de balas
-├── Environment/     Door, Button, Building y destrucción de mallas
+├── Hability/        Dash and abilities
+├── Enemies/         Warrior, shots, and a bullet pool
+├── Environment/     Door, Button, Building, and mesh destruction
 └── Systems/         Health, Damage, Destroy, ObjectPool
 ```
 
-`RobotoController` usa `CharacterController`. Separa velocidad de pie (`moveSpeed`) y velocidad en modo bola (`ballSpeed`), aplica gravedad y un salto.
+`RobotoController` uses `CharacterController`. It separates on-foot speed (`moveSpeed`) and ball-mode speed (`ballSpeed`), and applies gravity and a jump.
 
 ## Stack
 
 - Unity
 - C#
 
-## Cómo abrirlo
+## How to open it
 
-1. Crea un proyecto Unity vacío o abre uno existente.
-2. Copia `Assets` de este repo encima del `Assets` del proyecto (o clona y añade un `ProjectSettings` desde Unity Hub con **Add project from disk** si la carpeta ya lo trae en tu copia local).
-3. Abre la escena de juego y comprueba que el jugador tiene `RobotoController` y `PlayerInputManager`.
+1. Create an empty Unity project, or open an existing one.
+2. Copy this repo's `Assets` over the project's `Assets` (or clone it and add a `ProjectSettings` folder from Unity Hub with **Add project from disk** if your local copy already has one).
+3. Open the game scene and check that the player has `RobotoController` and `PlayerInputManager`.
 
-Si al clonar solo ves `Assets`, Unity Hub puede crear los ajustes de proyecto al abrirlo la primera vez. Elige una versión LTS reciente de Unity 6 o 2022, la misma con la que se guardaron las escenas si aparecen avisos de upgrade.
+If a clone only shows `Assets`, Unity Hub can create project settings the first time you open it. Pick a recent Unity 6 or 2022 LTS, the same line the scenes were saved with if Unity warns about an upgrade.
